@@ -14,9 +14,7 @@ export const login = {
     },
     methods: {},
     template: `
-      <div class="flex">
         ABC
-      </div>
     `
   };
   
