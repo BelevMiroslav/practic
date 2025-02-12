@@ -9,7 +9,7 @@ export const login = {
     mounted: function() {
       this.img = this.randomIntFromInterval(1, 7);
       if (this.$parent) {
-        this.parent = this.$parent.sparent;
+        this.parent = this.$parent.$parent;
       }
     },
     methods: {},
