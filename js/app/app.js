@@ -1,10 +1,16 @@
 import {router} from './router.js';
 import {msg} from './widgets/msg.js';
-document. addEventListener('DOMContentLoaded', function(){
+import {popup} from './widgets/popup.js';
+import {header} from './widgets/header.js';
+import {toogle} from './widgets/toogle.js';
+import {img} from './widgets/img.js';
+
+
+document.addEventListener('DOMContentLoaded', function(){
     const main = {
         data() {
             return {
-                url:"https://affiliate.yanbasok.com",
+                url:"http://affiliate.yanbasok.com",
                 user: {name:"", phone:"", email:"", date:"", auth:""},
                 formData:{},
                 title:"",
@@ -24,6 +30,7 @@ document. addEventListener('DOMContentLoaded', function(){
             init(){
                 var self = this;
                 if(window.localStorage.getItem('user')) self.user = JSON.parse(window.localStorage.getItem('user'));
+
                 router.isReady().then(() => {
                     if(window.localStorage.getItem("user")){
                         self.user = JSON.parse(window.localStorage.getItem("user"));
@@ -71,6 +78,7 @@ document. addEventListener('DOMContentLoaded', function(){
             },
             toFormData:function(obj){
                 var fd = new FormData();
+
                 for(var x in obj){
                     if(typeof obj[x] === 'object' && x != 'img' && x != 'copy' ){
                         for(var y in obj[x]){
@@ -90,8 +98,13 @@ document. addEventListener('DOMContentLoaded', function(){
             }
         }
     };
+
     var app = Vue.createApp(main)
+    .component('Image',img)
+    .component('Header',header)
+    .component('popup',popup)
     .component('msg',msg)
+    .component('toogle',toogle)
     .use(router)
     .mount('#content')
 });

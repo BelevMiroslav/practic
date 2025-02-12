@@ -75,6 +75,5 @@ export const msg = {
                 <i class="fas fa-check-circle"></i> {{success}} 
             </div> 
         </div>
-
-        `
+    `
 };

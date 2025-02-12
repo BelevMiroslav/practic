@@ -16,6 +16,7 @@ export const login ={
       login: function(){
           var self = this;
           var data = self.parent.toFormData(self.parent.formData);
+
           axios.post(this.parent.url+"/site/login",data).then(function(response){
               if (response.data.error) {
                   self.$refs.msg.alertFun(response.data.error);
@@ -44,22 +45,26 @@ export const login ={
                   </div>
               </div>
           </div>
+
           <div class="form inner-form p20">
               <form @submit.prevent="login()" v-if="parent.formData">
                   <div class="row">
                       <label>Email</label>
                       <input type="email" v-model="parent.formData.email" required>
                   </div>
+
                   <div class="row">
                       <label>Password</label>
                       <input type="password" v-model="parent.formData.password" required autocomplete="on">
                   </div>
+
                   <div class="row">
                       <button class="btn">Sign in</button>
                   </div>
               </form>
           </div>
       </div>
+
       <div id="right-area" class="w60">
           <img :src="parent.url+'/app/views/images/Cover_'+img+'.jpg'" />
       </div>
