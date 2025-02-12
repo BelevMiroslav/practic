@@ -14,7 +14,7 @@ export const login ={
   },
   template:`
   <div class="flex">
-  szfsfsdfsdfsdfsdf
+  asdasdsadsadsadasdsa
   </div>
   `
 };
