@@ -1,4 +1,5 @@
 import {router} from './router.js';
+import {msg} from './widgets/msg.js';
 document. addEventListener('DOMContentLoaded', function(){
     const main = {
         data() {
@@ -62,8 +63,8 @@ document. addEventListener('DOMContentLoaded', function(){
                         behavior: 'smooth'
                     });
                 },50);
-            }, 
-            page:function (path=""){
+            },
+            page:function(path=""){
                 this.$router.replace(path);
                 this.title=this.$route['name'];
                 document.title=this.$route['name'];
@@ -90,6 +91,7 @@ document. addEventListener('DOMContentLoaded', function(){
         }
     };
     var app = Vue.createApp(main)
+    .component('msg',msg)
     .use(router)
     .mount('#content')
 });
