@@ -423,4 +423,5 @@ export const campaign = {
             </div>
         </div>
     </div>
-`};
+    `
+};

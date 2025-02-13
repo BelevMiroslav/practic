@@ -131,4 +131,5 @@ export const sites = {
             </div>
         </div>    
     </div> 
-`};
+    `
+};

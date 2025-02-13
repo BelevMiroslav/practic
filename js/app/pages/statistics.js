@@ -177,4 +177,5 @@ export const statistics = {
             </div>
         </div>
     </div>
-`};
+    `
+};

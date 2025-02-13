@@ -329,4 +329,5 @@ export const campaigns = {
             </div>
         </div>
     </div>
-`};
+    `
+};

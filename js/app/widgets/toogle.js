@@ -25,5 +25,5 @@ export var toogle = {
             <input type="checkbox" v-model="value" @change="change()">
             <span class="slider round"></span>
         </label>
-        `
+    `
 };

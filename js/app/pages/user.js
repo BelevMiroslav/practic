@@ -571,4 +571,5 @@ export const user = {
 
         </div>
     </div>
-`};
+    `
+};

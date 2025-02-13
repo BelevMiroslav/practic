@@ -189,4 +189,5 @@ export const users = {
             </div>
         </div>
     </div>
-`};
+    `
+};
